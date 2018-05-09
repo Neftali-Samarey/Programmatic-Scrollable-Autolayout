@@ -5,5 +5,5 @@ A sample iOS app written in Swift 4 using programmatic approach to set Autolayou
 Here is a preview on iPhone X
 
 
-<img src="https://github.com/collegeboy16/Programmatic-Scrollable-Autolayout/blob/master/preview/screenshotPreview.png"/ style="height: auto; width: 30%;">
+<img style="width: 30%; height: auto;" src="https://github.com/collegeboy16/Programmatic-Scrollable-Autolayout/blob/master/preview/screenshotPreview.png"/>
 
