@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
+
     var card = Card()
     
+    // Scroll area (Will contain 2 views)
     let scrollableAreaView : UIScrollView = {
         
         let scrollView = UIScrollView()
@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         return scrollView
     }()
     
+    // View 1 (top view)
     let topView : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
         return view
     }()
     
+    // View 2 (Bottom view)
     let bottomView : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -88,13 +90,13 @@ class ViewController: UIViewController {
         bottomView.leadingAnchor.constraint(equalTo: scrollableAreaView.leadingAnchor).isActive = true
         bottomView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
         bottomView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        bottomView.heightAnchor.constraint(equalToConstant: scrollableAreaView.bounds.height + 400).isActive = true               // Important: was 400
+        bottomView.heightAnchor.constraint(equalToConstant: scrollableAreaView.bounds.height + 400).isActive = true
         bottomView.bottomAnchor.constraint(equalTo: scrollableAreaView.bottomAnchor).isActive = true
         
         
     }
     
-    
+    // Call method to enable constraints
     func constrainCard() {
         card.topAnchor.constraint(equalTo: self.topView.topAnchor, constant: 100).isActive = true
         card.bottomAnchor.constraint(equalTo: self.topView.bottomAnchor, constant: 20).isActive = true
